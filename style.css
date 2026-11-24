@@ -1,0 +1,242 @@
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8eeee;
+    color: #382020;
+    min-height: 100vh;
+    padding: 25px 15px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #351919;
+}
+
+/* Opciones de sesiones */
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.opcion {
+    border: none;
+    background: transparent;
+    color: #633535;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.opcion.activa {
+    background-color: #bd3434;
+    color: white;
+    font-weight: bold;
+}
+
+.opcion:hover {
+    background-color: #e6baba;
+}
+
+/* Tarjeta del temporizador */
+.temporizador {
+    background-color: #351919;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(80, 0, 0, 0.12);
+}
+
+.temporizador h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+/* Tiempo */
+.tiempo {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+/* Botones del temporizador */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.boton {
+    background-color: white;
+    color: #351919;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #f0dede;
+}
+
+/* Contador de sesiones */
+.contador {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Estado del temporizador */
+.estado {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Configuración */
+.configuracion {
+    background-color: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(80, 0, 0, 0.06);
+}
+
+.configuracion h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #351919;
+}
+
+/* Formulario de configuración */
+#formularioConfiguracion {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Campos de los tiempos */
+.grupo {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.grupo label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfcaca;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Botón guardar */
+.guardar {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    background-color: #bd3434;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.guardar:hover {
+    background-color: #992727;
+}
+
+/* Mensaje de configuración */
+.mensaje-configuracion {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Accesibilidad */
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #e66b6b;
+    outline-offset: 3px;
+}
+
+/* Diseño para celulares */
+@media (max-width: 550px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .opciones {
+        gap: 3px;
+    }
+
+    .opcion {
+        font-size: 13px;
+        padding: 10px 7px;
+    }
+
+    .tiempo {
+        font-size: 60px;
+    }
+
+    .botones {
+        gap: 8px;
+    }
+
+    .boton {
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+
+    .configuracion {
+        padding: 20px;
+    }
+
+    .configuracion h2 {
+        font-size: 21px;
+    }
+
+    #formularioConfiguracion {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+}
